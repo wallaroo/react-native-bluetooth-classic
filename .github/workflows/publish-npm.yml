@@ -4,8 +4,8 @@ name: release-tag
 # Publish on push to [master]
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
