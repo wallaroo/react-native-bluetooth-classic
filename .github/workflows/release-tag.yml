@@ -1,5 +1,5 @@
-# Publish To NPM
-name: publish-npm
+# NPM Release and push Tag
+name: release-tag
 
 # Publish on push to [master]
 on:
@@ -31,6 +31,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build and Release
-        run: npm release
+        run: npm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}          
