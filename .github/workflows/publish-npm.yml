@@ -24,6 +24,9 @@ jobs:
     # - Run `npm run publish` which publishes the tag
     steps:
       - uses: actions/checkout@v1
+        with:
+          # Using the tag which fired the action
+          ref: ${{ github.ref }}      
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
